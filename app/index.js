@@ -69,15 +69,19 @@ module.exports = yeoman.generators.Base.extend({
 			this.moduleName = props.moduleName;
 			this.camelModuleName = this._.camelize(props.moduleName);
 			this.shipName = props.shipName;
-			this.githubUsername = props.githubUsername;
-			this.platformId = props.platformId;
-			this.orgUrl = props.orgUrl;
+			this.githubUsername = props.githubUsername || generator.config.get('githubUsername');
+			this.platformId = props.platformId || generator.config.get('platformId') ;
+			this.orgUrl = props.orgUrl || generator.config.get('orgUrl');
+			generator.config.set({
+				githubUsername:this.githubUsername,
+				platformId: this.platformId,
+				orgUrl: this.orgUrl
+			})
 			this.name = this.user.git.name();
 			this.email = this.user.git.email();
 			this.website = props.website;
 			this.humanizedWebsite = humanizeUrl(this.website);
 			this.superb = superb();
-
 			for (var i = templates.length - 1; i >= 0; i--) {
 				var template = templates[i];
 
