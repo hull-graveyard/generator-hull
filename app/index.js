@@ -7,13 +7,12 @@ var humanizeUrl = require('humanize-url');
 var yeoman = require('yeoman-generator');
 var templates= [
 	'.editorconfig',
+	'.eslintrc',
 	'.gitattributes',
 	'.gitignore',
-	'.eslintrc',
 	'.travis.yml',
 	'config.js',
 	'gulpfile.js',
-	'index.js',
 	'license',
 	'manifest.json',
 	'readme.md',
