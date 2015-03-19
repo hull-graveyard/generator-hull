@@ -1,0 +1,43 @@
+{
+  "name": "generator-hull",
+  "version": "1.0.0",
+  "description": "Scaffold out a Hull Ship",
+  "license": "MIT",
+  "repository": "hull/generator-hull",
+  "author": {
+    "name": "Hull Team",
+    "email": "contact@hull.io",
+    "url": "hull.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "node",
+    "module",
+    "hull",
+    "hull-ship",
+    "node_module",
+    "node-module"
+  ],
+  "dependencies": {
+    "humanize-url": "^1.0.1",
+    "normalize-url": "^1.2.0",
+    "superb": "^1.1.3",
+    "yeoman-generator": "^0.18.10"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

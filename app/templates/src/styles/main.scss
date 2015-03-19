@@ -1,0 +1,67 @@
+/*Styles go here*/
+/*@import works.*/
+
+body{
+  color: #2A2E34;
+  // color: #EAEEF3;
+}
+
+a, a:active, a:hover, a:focus{
+  color: #0093e6;
+  text-decoration: none;
+}
+
+.no-margin{
+  margin:0;
+}
+
+
+.download-link{
+  .svg-share-icon-download{
+    transform: scale(.9);
+  }
+  .svg-share-icon-download,
+  #download-icon-arrow,
+  #download-icon-ground{
+    transform-origin: 50%;
+    transition: all .2s ease-out;
+  }
+  #download-icon-arrow{
+    transform: translate3d(0,-20%,0) scale(.9);
+  }
+  #download-icon-ground{
+    transform: translate3d(0,20%,0) scale(.9);
+  }
+  &:hover{
+    .svg-share-icon-download,
+    #download-icon-arrow,
+    #download-icon-ground{
+      transform: translate3d(0,0,0) scale(1); 
+    }
+  }
+}
+
+
+$base: #ff0000;
+@keyframes rainbow {
+  @for $i from 0 through 10 {
+    #{$i* 10%}  {
+      fill: adjust-hue($base, $i *36deg);
+    }
+  }
+}
+
+.svg-icon-hull{
+  .svg-hull-upper,
+  .svg-hull-lower{
+    transform-origin: 50%;
+    transition: all .2s ease-out;
+  }
+
+  .svg-hull-upper{
+    animation: rainbow;
+  }
+  .svg-hull-lower{
+    animation: rainbow;
+  }
+}
